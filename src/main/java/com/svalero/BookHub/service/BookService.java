@@ -17,15 +17,13 @@ public class BookService {
     private BookRepository bookRepository;
     @Autowired
     private AuthorRepository authorRepository;
-    @Autowired
-    private ModelMapper modelMapper;
+  ;
 
-    public BookOutDTO createBook(BookInDTO bookIn, long authorId) throws AuthorNotFoundException {
+    public Book createBook(Book book, long authorId) throws AuthorNotFoundException {
         Author author = authorRepository.findById(authorId).orElseThrow(AuthorNotFoundException::new);
-        Book book = modelMapper.map(bookIn, Book.class);
         book.setAuthor(author);
-        bookRepository.save(book);
-        return modelMapper.map(book, BookOutDTO.class);
+        return bookRepository.save(book);
+
     }
 
 }
