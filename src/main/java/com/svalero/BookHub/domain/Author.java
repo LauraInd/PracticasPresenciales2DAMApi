@@ -26,7 +26,7 @@ public class Author {
     @Column
     private LocalDate birthdate;
     @Column
-    private boolean active;
+    private Boolean active;
 
 
     @OneToMany(mappedBy = "author")

@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 
+
 @RestController
-@RequestMapping("/authors")
 public class AuthorController {
     private final Logger logger = LoggerFactory.getLogger(AuthorController.class);
     private final AuthorService authorService;
@@ -25,7 +25,7 @@ public class AuthorController {
     }
 
     // Obtener todos los autores
-    @GetMapping
+    @GetMapping("/authors")
     public ResponseEntity<List<Author>> getAllAuthors() {
         logger.info("BEGIN getAllAuthors");
         List<Author> authors = authorService.getAllAuthors();
@@ -34,7 +34,7 @@ public class AuthorController {
     }
 
     // Agregar un nuevo autor
-    @PostMapping
+    @PostMapping("/authors")
     public ResponseEntity<Author> addAuthor(@RequestBody Author author) {
         logger.info("BEGIN addAuthor - Adding new author: {}", author.getName());
         Author newAuthor = authorService.saveAuthor(author);
@@ -43,7 +43,7 @@ public class AuthorController {
     }
 
     // Obtener un autor por ID
-    @GetMapping("/{id}")
+    @GetMapping("/authors/{id}")
     public ResponseEntity<Author> getAuthorById(@PathVariable Long id) throws AuthorNotFoundException {
         logger.info("BEGIN getAuthorById - Fetching author with ID: {}", id);
         try {
@@ -57,7 +57,7 @@ public class AuthorController {
     }
 
     // Buscar autor por nombre
-    @GetMapping("/name")
+    @GetMapping("/authors/name")
     public ResponseEntity<List<Author>> getAuthorsByName(@RequestParam String name) {
         logger.info("BEGIN getAuthorsByName - Searching authors with name: {}", name);
         List<Author> authors = authorService.getAuthorsByName(name);
@@ -66,7 +66,7 @@ public class AuthorController {
     }
 
    //Buscar autores por fecha nacimiento
-    @GetMapping("/date")
+    @GetMapping("/authors/date")
     public ResponseEntity<List<Author>> getAuthorsByBirthdayDate(@RequestParam LocalDate date) {
         logger.info("BEGIN getAuthorsByBirthdayDate - Searching author for date: {}", date);
         List<Author> authors = authorService.getAuthorsByBirthdayDate(date);
@@ -74,8 +74,22 @@ public class AuthorController {
         return new ResponseEntity<>(authors, HttpStatus.OK);
     }
 
+    // Actualizar un autor por ID
+    @PutMapping("/authors/{id}")
+    public ResponseEntity<Author> updateAuthor(@PathVariable Long id, @RequestBody Author authorDetails) throws AuthorNotFoundException {
+        logger.info("BEGIN updateAuthor - Updating author with ID: {}", id);
+        try {
+            Author updatedAuthor = authorService.updateAuthor(id, authorDetails);
+            logger.info("END updateAuthor - Author updated with ID: {}", updatedAuthor.getId());
+            return new ResponseEntity<>(updatedAuthor, HttpStatus.OK);
+        } catch (Exception e) {
+            logger.error("Error in updateAuthor - Author not found with ID: {}", id, e);
+            throw e;
+        }
+    }
+
     // Eliminar un autor por ID
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/authors/{id}")
     public ResponseEntity<Void> deleteAuthor(@PathVariable Long id) throws AuthorNotFoundException {
         logger.info("BEGIN deleteAuthor - Deleting author with ID: {}", id);
         try {

@@ -45,6 +45,19 @@ public class AuthorService {
         return authorRepository.findByAuthorDate(date);
     }
 
+    // Actualizar un autor por ID
+    public Author updateAuthor(Long id, Author authorDetails) throws AuthorNotFoundException {
+        Author existingAuthor = authorRepository.findById(id)
+                .orElseThrow(() -> new AuthorNotFoundException("Author not found with id: " + id));
+
+        // Actualizar los campos del evento existente con los nuevos valores
+        existingAuthor.setName(authorDetails.getName());
+        existingAuthor.setSurname(authorDetails.getSurname());
+        existingAuthor.setBirthdate(authorDetails.getBirthdate());
+        existingAuthor.setActive(authorDetails.getActive());
+
+        return authorRepository.save(existingAuthor);
+    }
 
     public Author saveAuthor(Author author) {
         return authorRepository.save(author);
