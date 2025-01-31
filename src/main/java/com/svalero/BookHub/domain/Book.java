@@ -27,9 +27,11 @@ public class Book {
     private String publisher;
     @Column
     private LocalDate publicationDate;
+    @Column
+    private boolean active;
 
 @ManyToOne
-    @JoinColumn(name = "id_author")
+    @JoinColumn(name = "author_id")
     private Author author;
 
 
