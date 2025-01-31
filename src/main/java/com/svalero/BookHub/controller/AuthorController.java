@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -39,6 +40,24 @@ public class AuthorController {
         Author newAuthor = authorService.saveAuthor(author);
         logger.info("END addAuthor - Author added with ID: {}", newAuthor.getId());
         return new ResponseEntity<>(newAuthor, HttpStatus.CREATED);
+    }
+
+    // Buscar eventos por nombre
+    @GetMapping("/name")
+    public ResponseEntity<List<Author>> getAuthorsByName(@RequestParam String name) {
+        logger.info("BEGIN getAuthorsByName - Searching authors with name: {}", name);
+        List<Author> authors = authorService.getAuthorsByName(name);
+        logger.info("END getAuthorsByName - Total authors found: {}", authors.size());
+        return new ResponseEntity<>(authors, HttpStatus.OK);
+    }
+
+   //Buscar autores por fecha nacimiento
+    @GetMapping("/date")
+    public ResponseEntity<List<Author>> getAuthorsByBirthdayDate(@RequestParam LocalDate date) {
+        logger.info("BEGIN getAuthorsByBirthdayDate - Searching author for date: {}", date);
+        List<Author> authors = authorService.getAuthorsByBirthdayDate(date);
+        logger.info("END getAuthorsByBirthdayDate - Total authors found: {}", authors.size());
+        return new ResponseEntity<>(authors, HttpStatus.OK);
     }
 
     // Eliminar un autor por ID

@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -27,6 +28,17 @@ public class AuthorService {
     public List<Author> getAllAuthors() {
         return authorRepository.findAll();
     }
+
+    // Buscar autores por nombre
+    public List<Author> getAuthorsByName(String name) {
+        return authorRepository.findByAuthorName(name);
+    }
+
+    // Buscar autores por fecha de nacimiento
+    public List<Author> getAuthorsByBirthdayDate(LocalDate date) {
+        return authorRepository.findByAuthorDate(date);
+    }
+
 
     public Author saveAuthor(Author author) {
         return authorRepository.save(author);
