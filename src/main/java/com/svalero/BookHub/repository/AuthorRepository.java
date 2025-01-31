@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 
 public interface AuthorRepository extends CrudRepository<Author, Long> {
-    // Método para obtener todos los eventos
+    // Método para obtener todos los autores
     List<Author> findAll();
 
 

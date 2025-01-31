@@ -2,6 +2,7 @@ package com.svalero.BookHub.service;
 
 
 import com.svalero.BookHub.domain.Author;
+import com.svalero.BookHub.exception.AuthorNotFoundException;
 import com.svalero.BookHub.repository.AuthorRepository;
 import com.svalero.BookHub.repository.BookRepository;
 import org.modelmapper.ModelMapper;
@@ -25,5 +26,17 @@ public class AuthorService {
     // Obtener todos los autores
     public List<Author> getAllAuthors() {
         return authorRepository.findAll();
+    }
+
+    public Author saveAuthor(Author author) {
+        return authorRepository.save(author);
+    }
+
+    // Eliminar un autor por ID
+    public void deleteAuthor(Long id) throws AuthorNotFoundException {
+        if (!authorRepository.existsById(id)) {
+            throw new AuthorNotFoundException("Author not found with id: " + id);
+        }
+        authorRepository.deleteById(id);
     }
 }
