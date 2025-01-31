@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -24,7 +25,7 @@ public class Author {
     @Column
     private String surname;
     @Column
-    private LocalDate birthdate;
+    private Date birthdate;
     @Column
     private Boolean active;
 
