@@ -29,6 +29,12 @@ public class AuthorService {
         return authorRepository.findAll();
     }
 
+    // Obtener un autor por ID
+    public Author getAuthorById(Long id) throws AuthorNotFoundException {
+        return authorRepository.findById(id)
+                .orElseThrow(() -> new AuthorNotFoundException("Author not found with id: " + id));
+    }
+
     // Buscar autores por nombre
     public List<Author> getAuthorsByName(String name) {
         return authorRepository.findByAuthorName(name);

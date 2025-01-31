@@ -42,6 +42,20 @@ public class AuthorController {
         return new ResponseEntity<>(newAuthor, HttpStatus.CREATED);
     }
 
+    // Obtener un autor por ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Author> getAuthorById(@PathVariable Long id) throws AuthorNotFoundException {
+        logger.info("BEGIN getAuthorById - Fetching author with ID: {}", id);
+        try {
+            Author author = authorService.getAuthorById(id);
+            logger.info("END getAuthorById - Author found: {}", author.getId());
+            return new ResponseEntity<>(author, HttpStatus.OK);
+        } catch (Exception e) {
+            logger.error("Error in getAuthorById - Author not found with ID: {}", id, e);
+            throw e;
+        }
+    }
+
     // Buscar autor por nombre
     @GetMapping("/name")
     public ResponseEntity<List<Author>> getAuthorsByName(@RequestParam String name) {
