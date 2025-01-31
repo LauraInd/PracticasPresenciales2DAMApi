@@ -29,7 +29,7 @@ public class Book {
     private LocalDate publicationDate;
 
 @ManyToOne
-    @JoinColumn(name = "id_author")
+    @JoinColumn(name = "author_id")
     private Author author;
 
 
