@@ -20,13 +20,14 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column
-    private String name;
+    private String title;
     @Column
-    private String surname;
+    private String genre;
     @Column
-    private LocalDate birthdate;
+    private String publisher;
     @Column
-    private boolean active;
+    private LocalDate publicationDate;
+
 
 
 
