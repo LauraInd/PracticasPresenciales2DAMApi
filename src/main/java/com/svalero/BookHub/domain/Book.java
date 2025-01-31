@@ -27,6 +27,8 @@ public class Book {
     private String publisher;
     @Column
     private LocalDate publicationDate;
+    @Column
+    private boolean active;
 
 @ManyToOne
     @JoinColumn(name = "author_id")
