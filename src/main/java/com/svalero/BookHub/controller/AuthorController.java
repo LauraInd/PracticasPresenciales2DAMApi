@@ -56,24 +56,6 @@ public class AuthorController {
         }
     }
 
-    // Buscar autor por nombre
-  /**
-    public ResponseEnti ty<List<Author>> getAuthorsByName(@RequestParam String name) {
-        logger.info("BEGIN getAuthorsByName - Searching authors with name: {}", name);
-        List<Author> authors = authorService.getAuthorsByName(name);
-        logger.info("END getAuthorsByName - Total authors found: {}", authors.size());
-        return new ResponseEntity<>(authors, HttpStatus.OK);
-    }
-
-   //Buscar autores por fecha nacimiento
-
-    public ResponseEntity<List<Author>> getAuthorsByBirthdayDate(@RequestParam LocalDate date) {
-        logger.info("BEGIN getAuthorsByBirthdayDate - Searching author for date: {}", date);
-        List<Author> authors = authorService.getAuthorsByBirthdayDate(date);
-        logger.info("END getAuthorsByBirthdayDate - Total authors found: {}", authors.size());
-        return new ResponseEntity<>(authors, HttpStatus.OK);
-    } */
-
     // Actualizar un autor por ID
     @PutMapping("/authors/{id}")
     public ResponseEntity<Author> updateAuthor(@PathVariable Long id, @RequestBody Author authorDetails) throws AuthorNotFoundException {
