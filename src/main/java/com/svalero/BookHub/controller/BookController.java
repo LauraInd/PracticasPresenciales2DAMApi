@@ -29,7 +29,7 @@ public class BookController {
     public ResponseEntity<List<Book>> getAllBooks() {
         logger.info("BEGIN getAllBook");
         List<Book> books = bookService.getAllBooks();
-        logger.info("END getAllBook - Total books fetched: {}", getAllBooks());
+        logger.info("END getAllBook - Total books fetched: {}");
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
