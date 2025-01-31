@@ -1,0 +1,637 @@
+2025-01-31 16:23:17,600 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23.0.2 with PID 19204 (D:\API\PracticasPresenciales2DAMApi\target\classes started by S2-PC165 in D:\API\PracticasPresenciales2DAMApi)
+2025-01-31 16:23:17,600 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 16:23:17,980 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 16:23:18,011 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2025-01-31 16:23:18,356 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 16:23:18,356 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 16:23:18,356 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 16:23:18,356 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 16:23:18,403 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 16:23:18,403 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 775 ms
+2025-01-31 16:23:18,418 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 16:23:18,582 INFO c.z.h.p.HikariPool {checkFailFast} [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/Ruta/al/fichero/myshoponline.db user=SA
+2025-01-31 16:23:18,583 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Start completed.
+2025-01-31 16:23:18,594 INFO o.s.b.a.h.H2ConsoleAutoConfiguration {logDataSources} [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:/Ruta/al/fichero/myshoponline.db'
+2025-01-31 16:23:18,669 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 16:23:18,702 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 16:23:18,723 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 16:23:18,888 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 16:23:18,916 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 16:23:18,927 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 16:23:19,472 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 16:23:19,519 INFO o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 16:23:19,672 WARN o.s.c.s.AbstractApplicationContext {refresh} [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorController' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\controller\AuthorController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorService' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\service\AuthorService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorRepository' defined in com.svalero.BookHub.repository.AuthorRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+2025-01-31 16:23:19,674 INFO o.s.o.j.AbstractEntityManagerFactoryBean {destroy} [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 16:23:19,676 INFO c.z.h.HikariDataSource {close} [main] HikariPool-1 - Shutdown initiated...
+2025-01-31 16:23:19,689 INFO c.z.h.HikariDataSource {close} [main] HikariPool-1 - Shutdown completed.
+2025-01-31 16:23:19,689 INFO o.a.j.l.DirectJDKLog {log} [main] Stopping service [Tomcat]
+2025-01-31 16:23:19,689 INFO o.s.b.a.l.ConditionEvaluationReportLogger {logMessage} [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-31 16:23:19,704 ERROR o.s.b.SpringApplication {reportFailure} [main] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorController' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\controller\AuthorController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorService' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\service\AuthorService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorRepository' defined in com.svalero.BookHub.repository.AuthorRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.svalero.BookHub.BookHubApplication.main(BookHubApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorService' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\service\AuthorService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorRepository' defined in com.svalero.BookHub.repository.AuthorRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authorRepository' defined in com.svalero.BookHub.repository.AuthorRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 34 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:440)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1849)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:262)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116)
+	... 56 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'authorName' found for type 'Author'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:259)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:727)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:260)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:389)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:727)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:390)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:103)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101)
+	... 60 common frames omitted
+2025-01-31 16:25:51,583 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23.0.2 with PID 10968 (D:\API\PracticasPresenciales2DAMApi\target\classes started by S2-PC165 in D:\API\PracticasPresenciales2DAMApi)
+2025-01-31 16:25:51,599 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 16:25:51,971 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 16:25:52,002 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2025-01-31 16:25:52,346 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 16:25:52,346 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 16:25:52,361 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 16:25:52,361 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 16:25:52,392 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 16:25:52,392 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 765 ms
+2025-01-31 16:25:52,424 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 16:25:53,527 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 16:25:53,574 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 16:25:53,589 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 16:25:53,761 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 16:25:53,777 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 16:25:54,786 WARN o.h.e.j.s.SqlExceptionHelper {logExceptions} [main] SQL Error: 90011, SQLState: 90011
+2025-01-31 16:25:54,786 ERROR o.h.e.j.s.SqlExceptionHelper {logExceptions} [main] A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]
+2025-01-31 16:25:54,786 WARN o.h.e.j.e.i.JdbcEnvironmentInitiator {getJdbcEnvironmentUsingJdbcMetadata} [main] HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1849)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.svalero.BookHub.BookHubApplication.main(BookHubApplication.java:10)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.engine.ConnectionInfo.getName(ConnectionInfo.java:465)
+	at org.h2.engine.Engine.openSession(Engine.java:49)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:344)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+2025-01-31 16:25:54,802 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 16:25:54,817 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 2.1.214
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 16:25:55,346 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 16:25:55,362 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 16:25:56,369 WARN o.h.e.j.s.SqlExceptionHelper {logExceptions} [main] SQL Error: 90011, SQLState: 90011
+2025-01-31 16:25:56,369 ERROR o.h.e.j.s.SqlExceptionHelper {logExceptions} [main] A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]
+2025-01-31 16:25:56,369 ERROR o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]] [n/a]
+2025-01-31 16:25:56,369 WARN o.s.c.s.AbstractApplicationContext {refresh} [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]] [n/a]
+2025-01-31 16:25:56,369 INFO o.a.j.l.DirectJDKLog {log} [main] Stopping service [Tomcat]
+2025-01-31 16:25:56,385 INFO o.s.b.a.l.ConditionEvaluationReportLogger {logMessage} [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-31 16:25:56,385 ERROR o.s.b.SpringApplication {reportFailure} [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.svalero.BookHub.BookHubApplication.main(BookHubApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1849)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:51)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:93)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	... 19 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:D/API/bookhub.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.engine.ConnectionInfo.getName(ConnectionInfo.java:465)
+	at org.h2.engine.Engine.openSession(Engine.java:49)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:344)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 39 common frames omitted
+2025-01-31 16:28:19,465 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23.0.2 with PID 17496 (D:\API\PracticasPresenciales2DAMApi\target\classes started by S2-PC165 in D:\API\PracticasPresenciales2DAMApi)
+2025-01-31 16:28:19,465 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 16:28:19,842 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 16:28:19,874 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2025-01-31 16:28:20,195 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 16:28:20,211 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 16:28:20,211 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 16:28:20,211 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 16:28:20,257 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 16:28:20,257 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 757 ms
+2025-01-31 16:28:20,273 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 16:28:20,408 INFO c.z.h.p.HikariPool {checkFailFast} [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:D:/API/bookhub.db user=SA
+2025-01-31 16:28:20,410 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Start completed.
+2025-01-31 16:28:20,425 INFO o.s.b.a.h.H2ConsoleAutoConfiguration {logDataSources} [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:D:/API/bookhub.db'
+2025-01-31 16:28:20,499 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 16:28:20,530 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 16:28:20,551 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 16:28:20,714 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 16:28:20,740 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 16:28:20,752 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 16:28:21,279 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 16:28:21,333 INFO o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 16:28:21,488 WARN o.s.c.s.AbstractApplicationContext {refresh} [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorController' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\controller\AuthorController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorService' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\service\AuthorService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorRepository' defined in com.svalero.BookHub.repository.AuthorRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+2025-01-31 16:28:21,489 INFO o.s.o.j.AbstractEntityManagerFactoryBean {destroy} [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 16:28:21,491 INFO c.z.h.HikariDataSource {close} [main] HikariPool-1 - Shutdown initiated...
+2025-01-31 16:28:21,494 INFO c.z.h.HikariDataSource {close} [main] HikariPool-1 - Shutdown completed.
+2025-01-31 16:28:21,494 INFO o.a.j.l.DirectJDKLog {log} [main] Stopping service [Tomcat]
+2025-01-31 16:28:21,494 INFO o.s.b.a.l.ConditionEvaluationReportLogger {logMessage} [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-31 16:28:21,509 ERROR o.s.b.SpringApplication {reportFailure} [main] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorController' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\controller\AuthorController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorService' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\service\AuthorService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorRepository' defined in com.svalero.BookHub.repository.AuthorRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.svalero.BookHub.BookHubApplication.main(BookHubApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorService' defined in file [D:\API\PracticasPresenciales2DAMApi\target\classes\com\svalero\BookHub\service\AuthorService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authorRepository' defined in com.svalero.BookHub.repository.AuthorRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authorRepository' defined in com.svalero.BookHub.repository.AuthorRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 34 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); Reason: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:440)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1849)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.svalero.BookHub.repository.AuthorRepository.findByAuthorName(java.lang.String); No property 'authorName' found for type 'Author'
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:262)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116)
+	... 56 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'authorName' found for type 'Author'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:259)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:727)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:260)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:389)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:727)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:390)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:103)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101)
+	... 60 common frames omitted
+2025-01-31 16:31:15,398 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23.0.2 with PID 15380 (D:\API\PracticasPresenciales2DAMApi\target\classes started by S2-PC165 in D:\API\PracticasPresenciales2DAMApi)
+2025-01-31 16:31:15,398 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 16:31:15,775 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 16:31:15,807 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2025-01-31 16:31:16,145 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 16:31:16,148 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 16:31:16,148 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 16:31:16,148 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 16:31:16,195 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 16:31:16,195 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 768 ms
+2025-01-31 16:31:16,210 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 16:31:16,366 INFO c.z.h.p.HikariPool {checkFailFast} [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:D:/API/bookhub.db user=SA
+2025-01-31 16:31:16,368 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Start completed.
+2025-01-31 16:31:16,376 INFO o.s.b.a.h.H2ConsoleAutoConfiguration {logDataSources} [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:D:/API/bookhub.db'
+2025-01-31 16:31:16,452 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 16:31:16,482 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 16:31:16,502 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 16:31:16,669 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 16:31:16,695 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 16:31:16,708 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 16:31:17,243 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 16:31:17,281 INFO o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 16:31:17,516 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration {openEntityManagerInViewInterceptor} [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-31 16:31:17,700 INFO o.a.j.l.DirectJDKLog {log} [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-31 16:31:17,717 INFO o.s.b.w.e.t.TomcatWebServer {start} [main] Tomcat started on port 8080 (http) with context path '/'
+2025-01-31 16:31:17,723 INFO o.s.b.StartupInfoLogger {logStarted} [main] Started BookHubApplication in 2.674 seconds (process running for 2.906)
+2025-01-31 16:31:53,253 INFO o.a.j.l.DirectJDKLog {log} [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-31 16:31:53,254 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-31 16:31:53,255 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Completed initialization in 1 ms
+2025-01-31 16:55:20,534 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23.0.2 with PID 18124 (D:\API\PracticasPresenciales2DAMApi\target\classes started by S2-PC165 in D:\API\PracticasPresenciales2DAMApi)
+2025-01-31 16:55:20,534 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 16:55:20,898 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 16:55:20,945 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2025-01-31 16:55:21,266 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 16:55:21,282 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 16:55:21,282 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 16:55:21,282 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 16:55:21,329 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 16:55:21,329 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 763 ms
+2025-01-31 16:55:21,344 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 16:55:21,494 INFO c.z.h.p.HikariPool {checkFailFast} [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:D:/API/bookhub.db user=SA
+2025-01-31 16:55:21,496 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Start completed.
+2025-01-31 16:55:21,505 INFO o.s.b.a.h.H2ConsoleAutoConfiguration {logDataSources} [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:D:/API/bookhub.db'
+2025-01-31 16:55:21,580 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 16:55:21,613 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 16:55:21,632 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 16:55:21,797 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 16:55:21,823 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 16:55:21,835 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 16:55:22,379 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 16:55:22,418 INFO o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 16:55:22,642 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration {openEntityManagerInViewInterceptor} [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-31 16:55:22,823 INFO o.a.j.l.DirectJDKLog {log} [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-31 16:55:22,838 INFO o.s.b.w.e.t.TomcatWebServer {start} [main] Tomcat started on port 8080 (http) with context path '/'
+2025-01-31 16:55:22,846 INFO o.s.b.StartupInfoLogger {logStarted} [main] Started BookHubApplication in 2.654 seconds (process running for 2.872)
+2025-01-31 17:07:59,185 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23 with PID 8153 (/Users/lauraindia/Downloads/BookHub/target/classes started by lauraindia in /Users/lauraindia/Downloads/BookHub)
+2025-01-31 17:07:59,188 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 17:07:59,824 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 17:07:59,901 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2025-01-31 17:08:00,467 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 17:08:00,495 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 17:08:00,502 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 17:08:00,503 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 17:08:00,613 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 17:08:00,614 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 1373 ms
+2025-01-31 17:08:00,656 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 17:08:00,987 INFO c.z.h.p.HikariPool {checkFailFast} [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:D:/API/bookhub.db user=SA
+2025-01-31 17:08:00,999 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Start completed.
+2025-01-31 17:08:01,017 INFO o.s.b.a.h.H2ConsoleAutoConfiguration {logDataSources} [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:D:/API/bookhub.db'
+2025-01-31 17:08:01,186 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 17:08:01,281 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 17:08:01,326 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 17:08:01,668 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 17:08:01,734 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 17:08:01,753 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 17:08:02,870 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 17:08:02,951 INFO o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 17:08:03,405 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration {openEntityManagerInViewInterceptor} [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-31 17:08:03,787 INFO o.a.j.l.DirectJDKLog {log} [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-31 17:08:03,848 INFO o.s.b.w.e.t.TomcatWebServer {start} [main] Tomcat started on port 8080 (http) with context path '/'
+2025-01-31 17:08:03,855 INFO o.s.b.StartupInfoLogger {logStarted} [main] Started BookHubApplication in 5.345 seconds (process running for 5.771)
+2025-01-31 17:13:37,330 INFO o.a.j.l.DirectJDKLog {log} [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-31 17:13:37,333 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-31 17:13:37,348 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Completed initialization in 14 ms
+2025-01-31 17:13:37,486 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] BEGIN getAllAuthors
+2025-01-31 17:13:37,766 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] END getAllAuthors - Total authors fetched: 0
+2025-01-31 17:15:28,238 WARN o.s.w.s.h.AbstractHandlerExceptionResolver {logException} [http-nio-8080-exec-5] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "29-10-1999": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '29-10-1999' could not be parsed at index 0]
+2025-01-31 17:17:07,887 INFO o.s.b.w.e.t.GracefulShutdown {shutDownGracefully} [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-31 17:17:07,935 INFO o.s.b.w.e.t.GracefulShutdown {doShutdown} [tomcat-shutdown] Graceful shutdown complete
+2025-01-31 17:17:07,949 INFO o.s.o.j.AbstractEntityManagerFactoryBean {destroy} [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 17:17:07,967 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-01-31 17:17:07,975 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-01-31 17:17:19,599 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23.0.2 with PID 11135 (/Users/lauraindia/Downloads/BookHub/target/classes started by lauraindia in /Users/lauraindia/Downloads/BookHub)
+2025-01-31 17:17:19,601 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 17:17:20,338 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 17:17:20,426 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2025-01-31 17:17:21,039 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 17:17:21,058 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 17:17:21,061 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 17:17:21,062 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 17:17:21,136 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 17:17:21,137 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 1465 ms
+2025-01-31 17:17:21,175 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 17:17:21,468 INFO c.z.h.p.HikariPool {checkFailFast} [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:D:/API/bookhub.db user=SA
+2025-01-31 17:17:21,470 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Start completed.
+2025-01-31 17:17:21,483 INFO o.s.b.a.h.H2ConsoleAutoConfiguration {logDataSources} [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:D:/API/bookhub.db'
+2025-01-31 17:17:21,635 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 17:17:21,744 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 17:17:21,797 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 17:17:22,187 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 17:17:22,247 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 17:17:22,266 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 17:17:23,293 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 17:17:23,373 INFO o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 17:17:23,828 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration {openEntityManagerInViewInterceptor} [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-31 17:17:24,225 INFO o.a.j.l.DirectJDKLog {log} [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-31 17:17:24,253 INFO o.s.b.w.e.t.TomcatWebServer {start} [main] Tomcat started on port 8080 (http) with context path '/'
+2025-01-31 17:17:24,261 INFO o.s.b.StartupInfoLogger {logStarted} [main] Started BookHubApplication in 5.275 seconds (process running for 5.663)
+2025-01-31 17:17:28,787 INFO o.a.j.l.DirectJDKLog {log} [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-31 17:17:28,789 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-31 17:17:28,792 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Completed initialization in 3 ms
+2025-01-31 17:17:28,974 WARN o.s.w.s.h.AbstractHandlerExceptionResolver {logException} [http-nio-8080-exec-1] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "29-10-1999": not a valid representation (error: Failed to parse Date value '29-10-1999': Cannot parse date "29-10-1999": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSX", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))]
+2025-01-31 17:18:40,201 WARN o.s.w.s.h.AbstractHandlerExceptionResolver {logException} [http-nio-8080-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "29/10/1999": not a valid representation (error: Failed to parse Date value '29/10/1999': Cannot parse date "29/10/1999": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSX", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))]
+2025-01-31 17:20:06,850 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-6] BEGIN getAllAuthors
+2025-01-31 17:20:07,218 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-6] END getAllAuthors - Total authors fetched: 0
+2025-01-31 17:21:21,184 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-9] BEGIN addAuthor - Adding new author: Laura
+2025-01-31 17:21:21,267 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-9] END addAuthor - Author added with ID: 1
+2025-01-31 17:21:40,133 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-10] BEGIN getAllAuthors
+2025-01-31 17:21:40,152 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-10] END getAllAuthors - Total authors fetched: 1
+2025-01-31 17:22:10,787 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-2] BEGIN addAuthor - Adding new author: Javier
+2025-01-31 17:22:10,790 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-2] END addAuthor - Author added with ID: 2
+2025-01-31 17:22:14,757 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] BEGIN getAllAuthors
+2025-01-31 17:22:14,761 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] END getAllAuthors - Total authors fetched: 2
+2025-01-31 17:23:08,880 WARN o.s.w.s.h.AbstractHandlerExceptionResolver {logException} [http-nio-8080-exec-3] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'active': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2025-01-31 17:23:22,078 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-5] BEGIN addAuthor - Adding new author: Tatiana
+2025-01-31 17:23:22,081 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-5] END addAuthor - Author added with ID: 3
+2025-01-31 17:23:26,864 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-6] BEGIN getAllAuthors
+2025-01-31 17:23:26,867 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-6] END getAllAuthors - Total authors fetched: 3
+2025-01-31 17:23:52,565 INFO o.s.b.w.e.t.GracefulShutdown {shutDownGracefully} [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-31 17:23:52,602 INFO o.s.b.w.e.t.GracefulShutdown {doShutdown} [tomcat-shutdown] Graceful shutdown complete
+2025-01-31 17:23:52,612 INFO o.s.o.j.AbstractEntityManagerFactoryBean {destroy} [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 17:23:52,634 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-01-31 17:23:52,652 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

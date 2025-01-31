@@ -11,10 +11,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookInDTO {
-    private long id;
     private String title;
     private String genre;
     private String publisher;
     private LocalDate publicationDate;
-
 }
