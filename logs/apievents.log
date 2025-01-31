@@ -1025,3 +1025,142 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: A file path that 
 2025-01-31 17:53:04,081 INFO o.s.o.j.AbstractEntityManagerFactoryBean {destroy} [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-01-31 17:53:04,084 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2025-01-31 17:53:04,086 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-01-31 17:56:49,884 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23.0.2 with PID 11787 (/Users/lauraindia/Downloads/BookHub/target/classes started by lauraindia in /Users/lauraindia/Downloads/BookHub)
+2025-01-31 17:56:49,887 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 17:56:50,580 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 17:56:50,663 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2025-01-31 17:56:51,318 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 17:56:51,335 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 17:56:51,340 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 17:56:51,340 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 17:56:51,439 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 17:56:51,440 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 1495 ms
+2025-01-31 17:56:51,474 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 17:56:51,779 INFO c.z.h.p.HikariPool {checkFailFast} [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:D:/API/bookhub.db user=SA
+2025-01-31 17:56:51,782 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Start completed.
+2025-01-31 17:56:51,794 INFO o.s.b.a.h.H2ConsoleAutoConfiguration {logDataSources} [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:D:/API/bookhub.db'
+2025-01-31 17:56:51,957 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 17:56:52,045 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 17:56:52,087 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 17:56:52,466 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 17:56:52,549 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 17:56:52,589 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 17:56:53,602 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 17:56:53,708 INFO o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 17:56:54,198 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration {openEntityManagerInViewInterceptor} [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-31 17:56:54,634 INFO o.a.j.l.DirectJDKLog {log} [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-31 17:56:54,685 INFO o.s.b.w.e.t.TomcatWebServer {start} [main] Tomcat started on port 8080 (http) with context path '/'
+2025-01-31 17:56:54,696 INFO o.s.b.StartupInfoLogger {logStarted} [main] Started BookHubApplication in 5.47 seconds (process running for 5.886)
+2025-01-31 17:57:05,675 INFO o.a.j.l.DirectJDKLog {log} [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-31 17:57:05,676 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-31 17:57:05,678 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Completed initialization in 1 ms
+2025-01-31 17:57:05,739 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] BEGIN getAllAuthors
+2025-01-31 17:57:05,972 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] END getAllAuthors - Total authors fetched: 0
+2025-01-31 17:57:16,313 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-3] BEGIN addAuthor - Adding new author: Tatiana
+2025-01-31 17:57:16,383 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-3] END addAuthor - Author added with ID: 1
+2025-01-31 17:57:24,631 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-4] BEGIN getAllAuthors
+2025-01-31 17:57:24,648 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-4] END getAllAuthors - Total authors fetched: 1
+2025-01-31 18:00:17,294 INFO o.s.b.w.e.t.GracefulShutdown {shutDownGracefully} [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-31 18:00:17,347 INFO o.s.b.w.e.t.GracefulShutdown {doShutdown} [tomcat-shutdown] Graceful shutdown complete
+2025-01-31 18:00:17,369 INFO o.s.o.j.AbstractEntityManagerFactoryBean {destroy} [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 18:00:17,395 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-01-31 18:00:17,409 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-01-31 18:00:22,914 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23.0.2 with PID 11832 (/Users/lauraindia/Downloads/BookHub/target/classes started by lauraindia in /Users/lauraindia/Downloads/BookHub)
+2025-01-31 18:00:22,916 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 18:00:23,555 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 18:00:23,635 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2025-01-31 18:00:24,199 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 18:00:24,216 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 18:00:24,218 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 18:00:24,219 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 18:00:24,283 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 18:00:24,284 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 1308 ms
+2025-01-31 18:00:24,321 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 18:00:24,610 INFO c.z.h.p.HikariPool {checkFailFast} [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/bookhub.db user=SA
+2025-01-31 18:00:24,612 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Start completed.
+2025-01-31 18:00:24,626 INFO o.s.b.a.h.H2ConsoleAutoConfiguration {logDataSources} [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:~/bookhub.db'
+2025-01-31 18:00:24,766 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 18:00:24,863 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 18:00:24,908 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 18:00:25,279 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 18:00:25,337 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 18:00:25,355 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 18:00:26,375 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 18:00:26,466 INFO o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 18:00:26,954 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration {openEntityManagerInViewInterceptor} [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-31 18:00:27,318 INFO o.a.j.l.DirectJDKLog {log} [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-31 18:00:27,350 INFO o.s.b.w.e.t.TomcatWebServer {start} [main] Tomcat started on port 8080 (http) with context path '/'
+2025-01-31 18:00:27,359 INFO o.s.b.StartupInfoLogger {logStarted} [main] Started BookHubApplication in 5.003 seconds (process running for 5.346)
+2025-01-31 18:00:51,637 INFO o.a.j.l.DirectJDKLog {log} [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-31 18:00:51,638 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-31 18:00:51,640 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Completed initialization in 1 ms
+2025-01-31 18:00:51,693 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] BEGIN getAllAuthors
+2025-01-31 18:00:51,880 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] END getAllAuthors - Total authors fetched: 0
+2025-01-31 18:00:57,303 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-3] BEGIN addAuthor - Adding new author: Tatiana
+2025-01-31 18:00:57,369 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-3] END addAuthor - Author added with ID: 1
+2025-01-31 18:01:03,944 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-4] BEGIN getAllAuthors
+2025-01-31 18:01:03,959 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-4] END getAllAuthors - Total authors fetched: 1
+2025-01-31 18:01:08,188 INFO o.s.b.w.e.t.GracefulShutdown {shutDownGracefully} [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-31 18:01:08,203 INFO o.s.b.w.e.t.GracefulShutdown {doShutdown} [tomcat-shutdown] Graceful shutdown complete
+2025-01-31 18:01:08,213 INFO o.s.o.j.AbstractEntityManagerFactoryBean {destroy} [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 18:01:08,233 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-01-31 18:01:08,235 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-01-31 18:01:13,450 INFO o.s.b.StartupInfoLogger {logStarting} [main] Starting BookHubApplication using Java 23.0.2 with PID 11868 (/Users/lauraindia/Downloads/BookHub/target/classes started by lauraindia in /Users/lauraindia/Downloads/BookHub)
+2025-01-31 18:01:13,452 INFO o.s.b.SpringApplication {logStartupProfileInfo} [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-31 18:01:14,035 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31 18:01:14,111 INFO o.s.d.r.c.RepositoryConfigurationDelegate {registerRepositoriesIn} [main] Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2025-01-31 18:01:14,648 INFO o.s.b.w.e.t.TomcatWebServer {initialize} [main] Tomcat initialized with port 8080 (http)
+2025-01-31 18:01:14,662 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-31 18:01:14,665 INFO o.a.j.l.DirectJDKLog {log} [main] Starting service [Tomcat]
+2025-01-31 18:01:14,665 INFO o.a.j.l.DirectJDKLog {log} [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-31 18:01:14,729 INFO o.a.j.l.DirectJDKLog {log} [main] Initializing Spring embedded WebApplicationContext
+2025-01-31 18:01:14,731 INFO o.s.b.w.s.c.ServletWebServerApplicationContext {prepareWebApplicationContext} [main] Root WebApplicationContext: initialization completed in 1232 ms
+2025-01-31 18:01:14,763 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Starting...
+2025-01-31 18:01:15,062 INFO c.z.h.p.HikariPool {checkFailFast} [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/bookhub.db user=SA
+2025-01-31 18:01:15,063 INFO c.z.h.HikariDataSource {getConnection} [main] HikariPool-1 - Start completed.
+2025-01-31 18:01:15,077 INFO o.s.b.a.h.H2ConsoleAutoConfiguration {logDataSources} [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:~/bookhub.db'
+2025-01-31 18:01:15,242 INFO o.h.j.i.u.LogHelper {logPersistenceUnitInformation} [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31 18:01:15,396 INFO o.h.Version {logVersion} [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-31 18:01:15,437 INFO o.h.c.i.RegionFactoryInitiator {initiateService} [main] HHH000026: Second-level cache disabled
+2025-01-31 18:01:15,796 INFO o.s.o.j.p.SpringPersistenceUnitInfo {addTransformer} [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31 18:01:15,882 WARN o.h.e.j.d.i.DialectFactoryImpl {constructDialect} [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31 18:01:15,908 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator {initiateService} [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-31 18:01:16,975 INFO o.h.e.t.j.p.i.JtaPlatformInitiator {initiateService} [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31 18:01:17,034 INFO o.s.o.j.AbstractEntityManagerFactoryBean {buildNativeEntityManagerFactory} [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 18:01:17,485 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration {openEntityManagerInViewInterceptor} [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-31 18:01:17,851 INFO o.a.j.l.DirectJDKLog {log} [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-31 18:01:17,880 INFO o.s.b.w.e.t.TomcatWebServer {start} [main] Tomcat started on port 8080 (http) with context path '/'
+2025-01-31 18:01:17,886 INFO o.s.b.StartupInfoLogger {logStarted} [main] Started BookHubApplication in 4.931 seconds (process running for 5.282)
+2025-01-31 18:01:21,665 INFO o.a.j.l.DirectJDKLog {log} [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-31 18:01:21,666 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-31 18:01:21,668 INFO o.s.w.s.FrameworkServlet {initServletBean} [http-nio-8080-exec-1] Completed initialization in 2 ms
+2025-01-31 18:01:21,720 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] BEGIN getAllAuthors
+2025-01-31 18:01:21,895 INFO c.s.B.c.AuthorController {getAllAuthors} [http-nio-8080-exec-1] END getAllAuthors - Total authors fetched: 1
+2025-01-31 18:01:24,828 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-3] BEGIN addAuthor - Adding new author: Tatiana
+2025-01-31 18:01:24,871 INFO c.s.B.c.AuthorController {addAuthor} [http-nio-8080-exec-3] END addAuthor - Author added with ID: 2
+2025-01-31 18:03:05,700 INFO o.s.b.w.e.t.GracefulShutdown {shutDownGracefully} [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-31 18:03:05,717 INFO o.s.b.w.e.t.GracefulShutdown {doShutdown} [tomcat-shutdown] Graceful shutdown complete
+2025-01-31 18:03:05,723 INFO o.s.o.j.AbstractEntityManagerFactoryBean {destroy} [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31 18:03:05,749 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-01-31 18:03:05,768 INFO c.z.h.HikariDataSource {close} [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
