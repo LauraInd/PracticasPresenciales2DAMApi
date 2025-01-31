@@ -42,7 +42,7 @@ public class AuthorController {
         return new ResponseEntity<>(newAuthor, HttpStatus.CREATED);
     }
 
-    // Buscar eventos por nombre
+    // Buscar autor por nombre
     @GetMapping("/name")
     public ResponseEntity<List<Author>> getAuthorsByName(@RequestParam String name) {
         logger.info("BEGIN getAuthorsByName - Searching authors with name: {}", name);
