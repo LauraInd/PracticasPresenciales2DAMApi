@@ -24,7 +24,7 @@ public class BookService {
         Author author = authorRepository.findById(authorId).orElseThrow(AuthorNotFoundException::new);
         Book book = modelMapper.map(bookIn, Book.class);
         book.setAuthor(author);
-        authorRepository.save(author);
+        bookRepository.save(book);
         return modelMapper.map(book, BookOutDTO.class);
     }
 
