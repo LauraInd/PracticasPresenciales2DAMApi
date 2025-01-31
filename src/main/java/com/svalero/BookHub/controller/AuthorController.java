@@ -57,8 +57,8 @@ public class AuthorController {
     }
 
     // Buscar autor por nombre
-    @GetMapping("/authors/name")
-    public ResponseEntity<List<Author>> getAuthorsByName(@RequestParam String name) {
+  /**
+    public ResponseEnti ty<List<Author>> getAuthorsByName(@RequestParam String name) {
         logger.info("BEGIN getAuthorsByName - Searching authors with name: {}", name);
         List<Author> authors = authorService.getAuthorsByName(name);
         logger.info("END getAuthorsByName - Total authors found: {}", authors.size());
@@ -66,13 +66,13 @@ public class AuthorController {
     }
 
    //Buscar autores por fecha nacimiento
-    @GetMapping("/authors/date")
+
     public ResponseEntity<List<Author>> getAuthorsByBirthdayDate(@RequestParam LocalDate date) {
         logger.info("BEGIN getAuthorsByBirthdayDate - Searching author for date: {}", date);
         List<Author> authors = authorService.getAuthorsByBirthdayDate(date);
         logger.info("END getAuthorsByBirthdayDate - Total authors found: {}", authors.size());
         return new ResponseEntity<>(authors, HttpStatus.OK);
-    }
+    } */
 
     // Actualizar un autor por ID
     @PutMapping("/authors/{id}")
