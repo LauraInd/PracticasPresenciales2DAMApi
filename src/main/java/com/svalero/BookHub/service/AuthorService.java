@@ -35,15 +35,6 @@ public class AuthorService {
                 .orElseThrow(() -> new AuthorNotFoundException("Author not found with id: " + id));
     }
 
-    // Buscar autores por nombre
-    public List<Author> getAuthorsByName(String name) {
-        return authorRepository.findByAuthorName(name);
-    }
-
-    // Buscar autores por fecha de nacimiento
-    public List<Author> getAuthorsByBirthdayDate(LocalDate date) {
-        return authorRepository.findByAuthorDate(date);
-    }
 
     // Actualizar un autor por ID
     public Author updateAuthor(Long id, Author authorDetails) throws AuthorNotFoundException {
