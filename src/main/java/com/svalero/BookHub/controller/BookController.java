@@ -1,6 +1,7 @@
 package com.svalero.BookHub.controller;
 
 import com.svalero.BookHub.domain.Book;
+import com.svalero.BookHub.exception.AuthorNotFoundException;
 import com.svalero.BookHub.exception.BookNotFoundException;
 import com.svalero.BookHub.service.BookService;
 import org.slf4j.Logger;
@@ -35,7 +36,7 @@ public class BookController {
 
     //Para agregar un libro nuevo
     @PostMapping("/authors/{authorId}/books")
-    public ResponseEntity<Book> createBook(@RequestBody Book book) {
+    public ResponseEntity<Book> createBook(@RequestBody Book book) throws BookNotFoundException {
         logger.info("BEGIN createBook - Creating new book");
         Book newBook = bookService.saveBook(book);
         logger.info("END createBook - Book created with id {}", newBook.getId());
