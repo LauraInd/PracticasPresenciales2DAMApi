@@ -67,7 +67,11 @@ public class BookService {
         //Actualizar los campos de la categoria existente con los nuevos valores
         existingBook.setTitle(bookDetails.getTitle());
         existingBook.setAuthor(bookDetails.getAuthor());
+        existingBook.setGenre(bookDetails.getGenre());
         existingBook.setPublisher(bookDetails.getPublisher());
+        existingBook.setPublicationDate(bookDetails.getPublicationDate());
+        existingBook.setActive(bookDetails.isActive());
+
 
         return bookRepository.save(existingBook);
 
