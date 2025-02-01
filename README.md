@@ -27,3 +27,6 @@ BookHub is a Java application using Spring Boot for managing books and authors. 
 **PUT /books/{id}** - Update a book
 
 **DELETE /books/{id}** - Delete a book
+
+
+### Javier Martinez, Tatiana Alcubilla, Laura India
